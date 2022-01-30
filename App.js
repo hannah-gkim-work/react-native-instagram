@@ -1,13 +1,9 @@
 // import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-// import * as firebase from "firebase";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Landing from "./component/auth/Landing";
-// import firebase from "firebase";
-import firebase from "firebase/compat/app";
-// import "firebase/compat/auth";
-// import "firebase/compat/firestore";
+import Register from "./component/auth/Register";
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -19,6 +15,7 @@ export default function App() {
           component={Landing}
           option={{ headerShown: false }}
         />
+        <Stack.Screen name="Register" component={Register} />
       </Stack.Navigator>
     </NavigationContainer>
   );

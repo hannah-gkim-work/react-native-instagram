@@ -1,6 +1,5 @@
-// import { initializeApp } from "firebase/app";
 import firebase from "firebase/compat/app";
-// Other libraries might need to also be prefixed with "compat":
+// import "firebase/auth";
 import "firebase/compat/auth";
 
 const firebaseConfig = {
@@ -11,10 +10,10 @@ const firebaseConfig = {
   messagingSenderId: "332124346974",
   appId: "1:332124346974:web:0127aafd77cc076b8532cf",
 };
+let Firebase;
 
 if (firebase.apps.length === 0) {
-  firebase.initializeApp(firebaseConfig);
+  Firebase = firebase.initializeApp(firebaseConfig);
 }
-// const app = initializeApp(firebaseConfig);
 
-export { firebase };
+export default Firebase;
